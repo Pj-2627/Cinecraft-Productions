@@ -82,3 +82,42 @@ body {
 [data-section-id]:first-child {
     display: block;
 }
+
+
+/* From Uiverse.io by niat786 */ 
+.button {
+  -webkit-clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
+  clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
+  overflow: hidden;
+}
+
+button:hover {
+  cursor: pointer;
+  transition: all .3s ease-in;
+}
+
+
+/* spotlight */ 
+
+  @keyframes flicker {
+    0%   { opacity: 0.2; }
+    10%  { opacity: 0.4; }
+    20%  { opacity: 0.1; }
+    30%  { opacity: 0.35; }
+    40%  { opacity: 0.15; }
+    50%  { opacity: 0.3; }
+    60%  { opacity: 0.25; }
+    70%  { opacity: 0.4; }
+    80%  { opacity: 0.2; }
+    90%  { opacity: 0.3; }
+    100% { opacity: 0.2; }
+  }
+
+  .flicker {
+    animation: flicker 1.5s infinite;
+  }
+
+  .group:hover .flicker {
+    animation: none !important;
+    opacity: 1 !important;
+  }
